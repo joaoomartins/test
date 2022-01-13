@@ -1,7 +1,11 @@
-p{
-    color: pink;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-h2{
-    color:purple;
+body {
+    background-color: rgba(138, 161, 231, 0.671);
 }
+
