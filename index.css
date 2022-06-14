@@ -6,7 +6,8 @@
 }
 
 body {
-    background-image: url(img/ptgbackgroud.png);;
+    background-image: url(img/ptgbackgroud.png);
+    background-repeat: no-repeat;
 }
 
 .imgheader {
