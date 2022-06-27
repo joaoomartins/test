@@ -89,7 +89,7 @@ img {
 
 /*Main*/
 .main {
-		max-width: 28rem;
+		max-width: 24rem;
 		width: 100%;
 		margin: 2rem auto;
 		padding: 2rem 2.5rem;
@@ -183,3 +183,9 @@ img {
 				transition: all 0.35s ease;
 					background: var(--color-light);
 				}
+
+.img {
+	width: 35px;
+	height: 10px;
+}
+  

@@ -5,14 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="testlogin.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+        #input>* {
+          height: 1.3em;
+          float: left;
+        }
+    
+        #input img {
+          cursor: pointer;
+        }
+      </style>
 </head>
 <body>
     <main class="main">
         <div class="container">
             <section class="wrapper">
                 <div class="heading">
-                    <h1 class="text text-large">Sign In</h1>
+                    <h1 class="text text-large">Entrar</h1>
                     <p class="text text-normal">Novo utilizador?<span><a href="#" class="text text-links">Criar conta!</a></span>
                     </p>
                 </div>
@@ -22,15 +34,21 @@
                         <input type="email" name="email" class="input-field" placeholder="Email Address">
                     </div>
                     <div class="input-control">
-                        <label for="password" class="input-label" hidden>Password</label>
-                        <input type="password" name="password" class="input-field" placeholder="Password">
+                        <label for="password" class="input-label" hidden>NIF</label>
+                        <input type="text" name="nif" class="input-field" placeholder="NIF" maxlength="9">
                     </div>
-                    <!--<script>
+                    <div id="input" class="input-control">
+                        <label for="password" class="input-label" hidden>Password </label>
+                        <input type="password" name="password" class="input-field" placeholder="Password">
+                        <img class="img" src="img/eyebootstrap.svg" alt="">
+                    </div>
+                    <script>
                         var input = document.querySelector('#input input');
                         var img = document.querySelector('#input img');
                         img.addEventListener('click', function () {
                           input.type = input.type == 'text' ? 'password' : 'text';
-                        });</script>-->
+                        })
+                        </script>
                     <div class="input-control">
                         <a href="#" class="text text-links">Recuperar password</a>
                         <input type="button" name="submit" class="input-submit" value="Login" disabled>
