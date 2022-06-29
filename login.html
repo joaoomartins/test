@@ -1,80 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="login.css">
-  <link rel="shortcut icon" href="imagens/penguin house.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <title>Login | Penguin House</title>
-  <style>
-    #input>* {
-      height: 1.3em;
-      float: left;
-    }
-
-    #input img {
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        #input>* {
+          height: 1.3em;
+          float: left;
+        }
+    
+        #input img {
+          cursor: pointer;
+        }
+      </style>
 </head>
-
 <body>
-  <header class="header">
-    <div class="header-content">
-      <a class="logo" href="index.html" aria-label="store logo">
-        <img class="imagemlogin" src="imagens/Icons8-Ios7-Holidays-Christmas-Penguin.ico" alt="">
-      </a>
-    </div>
-  </header>
-  <div class="customer-login">
-    <div class="title">
-      <strong id="title" class="titulos" role="heading" aria-level="2">
-        Entre na sua conta PENGUIN HOUSE!
-      </strong>
-    </div>
-    <form method="post">
-      <fieldset class="fieldset_login">
-        <div class="emailrequired">
-          <label class="label" for="email"></label>
-          <span>Email</span>
-          <div>
-            <input id="email" class="input-text" type="email" name="Email" autocomplete="email" value="" title="Email"
-              data-validade="{required:true, 'validade-email':true}" aria-required="true">
-          </div>
+    <main class="main">
+        <div class="container">
+            <section class="wrapper">
+                <div class="heading">
+                    <h1 class="text text-large">Entrar</h1>
+                    <p class="text text-normal">Novo utilizador?<span><a href="criarconta.html" class="text text-links">Criar conta!</a></span>
+                    </p>
+                </div>
+                <form name="login" class="form">
+                    <div class="input-control">
+                        <label for="email" class="input-label" hidden>Email</label>
+                        <input type="email" name="email" class="input-field" placeholder="Email Address">
+                    </div>
+                    <div class="input-control">
+                        <label for="password" class="input-label" hidden>NIF</label>
+                        <input type="text" name="nif" class="input-field" placeholder="NIF" maxlength="9">
+                    </div>
+                    <div id="input" class="input-control">
+                        <label for="password" class="input-label" hidden>Password </label>
+                        <input type="password" name="password" class="input-field" placeholder="Password">
+                        <img class="img" src="img/eyebootstrap.svg" alt="">
+                    </div>
+                    <script>
+                        var input = document.querySelector('#input input');
+                        var img = document.querySelector('#input img');
+                        img.addEventListener('click', function () {
+                          input.type = input.type == 'text' ? 'password' : 'text';
+                        })
+                        </script>
+                    <div class="input-control">
+                        <a href="#" class="text text-links">Recuperar password</a>
+                        <input type="button" name="submit" class="input-submit" value="Login" disabled>
+                    </div>
+                </form>
+            </section>
         </div>
-        <div id="input">
-          <label class="label" for="password"></label>
-          <span>Password</span>
-          <input type="password" value="" placeholder="Password" />
-          <img src="img/yeybutton.png" alt="">
-        </div>
-        <script>
-          var input = document.querySelector('#input input');
-          var img = document.querySelector('#input img');
-          img.addEventListener('click', function () {
-            input.type = input.type == 'text' ? 'password' : 'text';
-          });</script>
-        <div class="toolbar">
-          <div class="primary">
-
-            <button id="send2" class="action login primary" type="submit" name="send">
-              <span>Login</span>
-            </button>
-
-            <a href="signup.html">Criar Conta</a>
-          </div>
-          <div class="secondary">
-            <a class="remind" href="recuperarpass.html">
-              <span>Esqueceu-se da palavra-passe?</span>
-            </a>
-          </div>
-        </div>
-  </fieldset>
-  </form>
-  </div>
+    </main>
 </body>
-
 </html>

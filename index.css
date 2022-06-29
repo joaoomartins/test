@@ -1,12 +1,3 @@
-body {
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: normal;
-    transition: none;
-    background-color: lightblue;
-}
-
 .img {
     /*imagem*/
     width: auto;
@@ -32,7 +23,7 @@ body {
 @media only screen and (max-width: 1024px) {
     .menu>ul {
         height: auto;
-        float: none;
+        float: right;
         display: none;
     }
     .menu {
@@ -53,11 +44,12 @@ body {
     width: auto;
     max-width: 40px;
     height: auto;
-}
+    
 
+}
 li a,  /*Centrar menu em tela pequena*/
 .dropbtn {
-    display: inline-block;
+    display: flex;
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 14px 16px;

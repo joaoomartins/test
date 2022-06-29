@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="testlogin.css">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Criar Conta</title>
     <style>
         #input>* {
           height: 1.3em;
@@ -24,22 +25,24 @@
         <div class="container">
             <section class="wrapper">
                 <div class="heading">
-                    <h1 class="text text-large">Entrar</h1>
-                    <p class="text text-normal">Novo utilizador?<span><a href="#" class="text text-links">Criar conta!</a></span>
-                    </p>
+                    <h1 class="text text-large">Criar Conta</h1>
                 </div>
                 <form name="login" class="form">
                     <div class="input-control">
-                        <label for="email" class="input-label" hidden>Email</label>
-                        <input type="email" name="email" class="input-field" placeholder="Email Address">
+                        <label for="name" class="input-label" hidden>Nome</label>
+                        <input type="text" name="nome" class="input-field" placeholder="Nome" required>
                     </div>
                     <div class="input-control">
-                        <label for="password" class="input-label" hidden>NIF</label>
-                        <input type="text" name="nif" class="input-field" placeholder="NIF" maxlength="9">
+                        <label for="email" class="input-label" hidden>Email</label>
+                        <input type="email" name="email" class="input-field" placeholder="Email" required>
+                    </div>
+                    <div class="input-control">
+                        <label for="nif" class="input-label" hidden>NIF</label>
+                        <input type="text" name="nif" class="input-field" placeholder="NIF" maxlength="9" required>
                     </div>
                     <div id="input" class="input-control">
                         <label for="password" class="input-label" hidden>Password </label>
-                        <input type="password" name="password" class="input-field" placeholder="Password">
+                        <input type="password" name="password" class="input-field" placeholder="Password" required>
                         <img class="img" src="img/eyebootstrap.svg" alt="">
                     </div>
                     <script>
@@ -50,8 +53,8 @@
                         })
                         </script>
                     <div class="input-control">
-                        <a href="#" class="text text-links">Recuperar password</a>
-                        <input type="button" name="submit" class="input-submit" value="Login" disabled>
+                        <a href="login.html" class="text text-links">Já tem conta</a>
+                        <a href="index.html"><input type="button" name="submit" class="input-submit" value="Login"></a>
                     </div>
                 </form>
             </section>
