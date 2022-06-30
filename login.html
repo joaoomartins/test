@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Login</title>
     <style>
         #input>* {
           height: 1.3em;
@@ -18,29 +18,80 @@
         #input img {
           cursor: pointer;
         }
+        /* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
       </style>
 </head>
-<body>
+<body onload="myFunction()" style="margin:0;">
+    <div id="loader"></div>
+ <div style="display:none;" id="myDiv" class="animate-bottom">
     <main class="main">
         <div class="container">
             <section class="wrapper">
                 <div class="heading">
                     <h1 class="text text-large">Entrar</h1>
-                    <p class="text text-normal">Novo utilizador?<span><a href="criarconta.html" class="text text-links">Criar conta!</a></span>
+                    <p class="text text-normal">Novo utilizador? <span><a href="criarconta.html" class="text text-links"> Criar conta!</a></span>
                     </p>
                 </div>
                 <form name="login" class="form">
                     <div class="input-control">
                         <label for="email" class="input-label" hidden>Email</label>
-                        <input type="email" name="email" class="input-field" placeholder="Email Address">
+                        <input type="email" name="email" class="input-field" placeholder="Email Address" required>
                     </div>
                     <div class="input-control">
                         <label for="password" class="input-label" hidden>NIF</label>
-                        <input type="text" name="nif" class="input-field" placeholder="NIF" maxlength="9">
+                        <input type="text" name="nif" class="input-field" placeholder="NIF" maxlength="9" required>
                     </div>
                     <div id="input" class="input-control">
                         <label for="password" class="input-label" hidden>Password </label>
-                        <input type="password" name="password" class="input-field" placeholder="Password">
+                        <input type="password" name="password" class="input-field" placeholder="Password" minlength="7" required>
                         <img class="img" src="img/eyebootstrap.svg" alt="">
                     </div>
                     <script>
@@ -50,13 +101,31 @@
                           input.type = input.type == 'text' ? 'password' : 'text';
                         })
                         </script>
-                    <div class="input-control">
-                        <a href="#" class="text text-links">Recuperar password</a>
-                        <input type="button" name="submit" class="input-submit" value="Login" disabled>
-                    </div>
+                        <div style="display:none;" id="myDiv1" class="animate-bottom">
+                            <div class="input-control">
+                                <a href="index.html"><input type="button" class="input-submit" value="Criar"></a>
+                            </div>
+                            
+                        </div>
+                        <div id="loader1"></div>
                 </form>
             </section>
         </div>
     </main>
+ </div>
+<script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 2000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+      document.getElementById("loader1").style.display = "none";
+      document.getElementById("myDiv1").style.display = "block";
+    }
+    </script>
 </body>
 </html>
