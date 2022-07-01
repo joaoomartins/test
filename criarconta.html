@@ -149,6 +149,9 @@
             </section>
         </div>
     </main>
+    <footer>
+      <button class="scrollToTopBtn"><img src="img/topbuttonimage.svg" alt=""></button>
+    </footer>
 </div>
 <script>
     var myVar;
@@ -163,25 +166,39 @@
     }
     </script>
     <script>
-      //Button
-      var mybutton = document.getElementById("myBtn");
-      
-      //Show the button
-      window.onscroll = function() {scrollFunction()};
-      
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
+      //Select footer
+  var target = document.querySelector("footer");
+  
+  var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+  var rootElement = document.documentElement;
+  
+  // Call the function
+  function callback(entries, observer) {
+    //Return
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Show button
+        scrollToTopBtn.classList.add("showBtn");
+      } else {
+        // Hide button
+        scrollToTopBtn.classList.remove("showBtn");
       }
-      
-      // GO to the Top
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-      </script>
+    });
+  }
+  
+  function scrollToTop() {
+    rootElement.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+  scrollToTopBtn.addEventListener("click", scrollToTop);
+  
+  // Next we instantiate the observer with the function we created above. This takes an optional configuration
+  // object that we will use in the other examples.
+  let observer = new IntersectionObserver(callback);
+  // Finally start observing the target element
+  observer.observe(target);
+    </script>
 </body>
 </html>
