@@ -69,6 +69,28 @@
   display: none;
   text-align: center;
 }
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
   </style>
 </head>
 <body onload="myFunction()" style="margin:0;">
@@ -98,9 +120,20 @@
 </header>
 
 <main>
-  <a href="testloading.html">loading</a>
-  <br>
-  <a href="nada.html">nada</a>
+  <div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <h2>Passe Interurbano</h2>
+      <img src="img/logo camara portalegre.jpg" alt="">
+    </div>
+    <div class="column" style="background-color:#bbb;">
+      <h2>Passe Urbano</h2>
+      <img src="img/logo camara portalegre.jpg" alt="">
+    </div>
+    <div class="column" style="background-color:#ccc;">
+      <h2>Carregar Viagens</h2>
+      <img src="img/logo camara portalegre.jpg" alt="">
+    </div>
+  </div>
 </main>
 
 <footer>
