@@ -18,7 +18,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <title>Página Inicial</title>
+  <title>Contactos</title>
   <style>
     /* Center the loader */
 #loader {
@@ -69,28 +69,6 @@
   display: none;
   text-align: center;
 }
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 20px;
-   /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
   </style>
 </head>
 <body onload="myFunction()" style="margin:0;">
@@ -120,39 +98,7 @@
 </header>
 
 <main>
-  <div class="row">
-    <div class="column" style="background-color:#aaa;">
-      <h2>Passe Interurbano</h2>
-      <br>
-      <a href="interurbano.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
-     <p>
-      <div>
-        <a href="interurbano.html"><button>Selecionar</button></a>
-      </div>
-    </p>
-      </div>
-    <div class="column" style="background-color:#bbb;">
-      <h2>Passe Urbano</h2>
-      <br>
-      <a href="urbano.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
-      <p>
-      <div>
-        <a href="urbano.html"><button>Selecionar</button></a>
-      </div>
-    </p>
-    </div>
-    <div class="column" style="background-color:#ccc;">
-      <h2>Carregar Viagens</h2>
-      <br>
-      <a href="carregarviagens.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
-      
-      <p>
-        <div>
-        <a href="carregarviagens.html"><button>Selecionar</button></a>
-      </div>
-    </p>
-    </div>
-  </div>
+    INTERURBANO
 </main>
 
 <footer>
@@ -162,8 +108,8 @@
 <script>
   var myVar;
   
-  function myFunction() {     //1700
-    myVar = setTimeout(showPage, 200);
+  function myFunction() {
+    myVar = setTimeout(showPage, 1200);
   }
   
   function showPage() {
@@ -172,7 +118,7 @@
   }
   </script>
   <script>
-    // Select element
+    // We select the element we want to target
 var target = document.querySelector("footer");
 
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn");

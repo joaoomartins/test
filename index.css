@@ -4,6 +4,11 @@
 html {
     scroll-behavior: smooth;
   }
+
+  .imgcolumn {
+    height: 200px;
+    width: 250px;
+  }
 .imglogo {
     /*imagem*/
     width: auto;
