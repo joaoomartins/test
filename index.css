@@ -84,7 +84,8 @@ footer {
   }
   
   .scrollToTopBtn {
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
+    /*background-color: rgb(255, 255, 255);*/
     border: none;
     color: rgb(255, 255, 255);
     cursor: pointer;
