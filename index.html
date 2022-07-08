@@ -72,16 +72,18 @@
 
 /* 3 colunas */
 .column {
-  float: left;
-  width: 33.33%;
-  padding: 20px;
+  float: center;
+  width: 500px;
+  padding: 30px;
 }
 
-/* Clear floats after the columns */
+
+
 .row:after {
   content: "";
   display: table;
   clear: both;
+
 }
 
 /* Responsive */
@@ -119,35 +121,35 @@
 </header>
 
 <main>
-  <div class="row">
-    <div class="column" style="background-color:#aaa;">
+  <div  class="row">
+    <div class="column" style="background-color:rgb(255, 255, 255);">
       <h2>Passe Interurbano</h2>
       <br>
       <a href="interurbano.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
      <p>
       <div>
-        <a href="interurbano.html"><button>Selecionar</button></a>
+        <a href="interurbano.html"><span>Selecionar</span></a>
       </div>
     </p>
       </div>
-    <div class="column" style="background-color:#bbb;">
+    <div class="column" style="background-color:rgb(255, 255, 255);">
       <h2>Passe Urbano</h2>
       <br>
       <a href="urbano.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
       <p>
       <div>
-        <a href="urbano.html"><button>Selecionar</button></a>
+        <a href="urbano.html"><span>Selecionar</span></a>
       </div>
     </p>
     </div>
-    <div class="column" style="background-color:#ccc;">
+    <div class="column" style="background-color:rgb(255, 255, 255);">
       <h2>Carregar Viagens</h2>
       <br>
       <a href="carregarviagens.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
       
       <p>
         <div>
-        <a href="carregarviagens.html"><button>Selecionar</button></a>
+        <a href="carregarviagens.html"><span>Selecionar</span></a>
       </div>
     </p>
     </div>
@@ -162,7 +164,7 @@
   var myVar;
   
   function myFunction() {     //1700
-    myVar = setTimeout(showPage, 1700);
+    myVar = setTimeout(showPage, 500);
   }
   
   function showPage() {
@@ -171,7 +173,7 @@
   }
   </script>
   <script>
-    // Select element
+    // Seleciona o elemento
 var target = document.querySelector("footer");
 
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn");

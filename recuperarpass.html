@@ -20,7 +20,7 @@
     crossorigin="anonymous"></script>
   <title>Contactos</title>
   <style>
-    /* Center the loader */
+    /* Centra o loading */
 #loader {
   position: absolute;
   left: 50%;
@@ -46,7 +46,7 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Add animation to "page content" */
+/* adiciona animacao" */
 .animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
@@ -120,21 +120,21 @@ POR FAZER
   }
   </script>
   <script>
-    // We select the element we want to target
+    // Seleciona o elemento footer
 var target = document.querySelector("footer");
 
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
 var rootElement = document.documentElement;
 
-// Next we want to create a function that will be called when that element is intersected
+// Cria a funcap chamada
 function callback(entries, observer) {
-  // The callback will return an array of entries, even if you are only observing a single item
+  // Retorna a array
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // Show button
+      // Mostra o botao
       scrollToTopBtn.classList.add("showBtn");
     } else {
-      // Hide button
+      // Esconde o Botao
       scrollToTopBtn.classList.remove("showBtn");
     }
   });
@@ -148,10 +148,8 @@ function scrollToTop() {
 }
 scrollToTopBtn.addEventListener("click", scrollToTop);
 
-// Next we instantiate the observer with the function we created above. This takes an optional configuration
-// object that we will use in the other examples.
 let observer = new IntersectionObserver(callback);
-// Finally start observing the target element
+// Mostra o elemento
 observer.observe(target);
   </script>
 </body>
