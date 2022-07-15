@@ -92,6 +92,67 @@
     width: 100%;
   }
 }
+/*Botao selecionar*/
+:root {
+	--color-white: #ffffff;
+	--color-light: #f1f5f9;
+	--color-black: #121212;
+	--color-night: #001632;
+
+	--color-red: #f44336;
+	--color-blue: #1a73e8;
+	--color-gray: #80868b;
+	--color-grayish: #dadce0;
+
+	--shadow-normal: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+		0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	--shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.input-control {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 1.25rem;
+			}
+
+			.input-field {
+				font-family: inherit;
+				font-size: 1rem;
+				font-weight: 400;
+				line-height: inherit;
+				width: 100%;
+				height: auto;
+				padding: 0.75rem 1.25rem;
+				border: none;
+				outline: none;
+				border-radius: 2rem;
+				color: var(--color-black);
+				background: var(--color-light);
+				text-transform: unset;
+				text-rendering: optimizeLegibility;
+			}
+
+			.input-submit {
+				font-family: inherit;
+				font-size: 1rem;
+				font-weight: 500;
+				line-height: inherit;
+				cursor: pointer;
+				min-width: 40%;
+				height: auto;
+				padding: 0.65rem 1.25rem;
+				border: none;
+				outline: none;
+				border-radius: 4rem;
+				color: var(--color-white);
+				background: var(--color-blue);
+				box-shadow: var(--shadow-medium);
+				text-transform: capitalize;
+				text-rendering: optimizeLegibility;
+			}
   </style>
 </head>
 <body onload="myFunction()" style="margin:0;">
@@ -121,22 +182,45 @@
 </header>
 
 <main>
-  <section>
-    <a href="passes.html"><h3>Que passe devo usar?</h3></a>
-    <p>Descubra qual o passe que se adqua mais a si!</p>
-    <img src="img/autocarro.jpg">
-</section>
-
-<section>
-    <a href="#"><h3>Perdi o meu cartão, o que devo fazer?</h3></a>
-    <p>Caso perca o cartao deve comunicar a um operador de transporte
-      para que o cartao seja anulado. Deve solicitar de seguida um 
-    novo cartao mediante o preço.</p>
-</section>
+  <div  class="row">
+    <div class="column" style="background-color:rgb(255, 255, 255);">
+      <h2>Passe Interurbano</h2>
+      <br>
+      <a href="interurbano.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
+     <p>
+        <p><strong> Interurbano - é a opção correta se utiliza os transportes para fora da zona urbana!</strong></p>
+      <div>
+        <a href="interurbano.html"><input type="button" class="input-submit" value="Selecionar"></a>
+      </div>
+      
+    </p>
+      </div>
+    <div class="column" style="background-color:rgb(255, 255, 255);">
+      <h2>Passe Urbano</h2>
+      <br>
+      <a href="urbano.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
+      <p>
+        <p><strong>Urbano - é a opção caso utilize os transportes dentro da zona urbana!</strong></p>
+      <div>
+        <a href="urbano.html"><input type="button" class="input-submit" value="Selecionar"></a>
+      </div>
+    </p>
+    </div>
+    <div class="column" style="background-color:rgb(255, 255, 255);">
+      <h2>Carregar Viagens</h2>
+      <br>
+      <a href="carregarviagens.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
+      <p>
+        <p><strong>Por viagens - é a melhor opção caso não utilize frequentemente os transportes!</strong></p>
+        <div>
+            <a href="carregarviagens.html"><input type="button" class="input-submit" value="Selecionar"></a>
+      </div>
+    </p>
+    </div>
+  </div>
 </main>
 
 <footer>
-  Julho, 2022&#174;
   <button class="scrollToTopBtn"><img class="imgtopbutton" src="img/topbuttonimage.svg" alt=""></button>
 </footer>
 </div>
@@ -188,36 +272,3 @@ observer.observe(target);
   </script>
 </body>
 </html>
-<!--<div  class="row">
-    <div class="column" style="background-color:rgb(255, 255, 255);">
-      <h2>Passe Interurbano</h2>
-      <br>
-      <a href="interurbano.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
-     <p>
-      <div>
-        <a href="interurbano.html"><span>Selecionar</span></a>
-      </div>
-    </p>
-      </div>
-    <div class="column" style="background-color:rgb(255, 255, 255);">
-      <h2>Passe Urbano</h2>
-      <br>
-      <a href="urbano.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
-      <p>
-      <div>
-        <a href="urbano.html"><span>Selecionar</span></a>
-      </div>
-    </p>
-    </div>
-    <div class="column" style="background-color:rgb(255, 255, 255);">
-      <h2>Carregar Viagens</h2>
-      <br>
-      <a href="carregarviagens.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
-      
-      <p>
-        <div>
-        <a href="carregarviagens.html"><span>Selecionar</span></a>
-      </div>
-    </p>
-    </div>
-  </div>-->
