@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="login.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -19,7 +18,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <title>Página Inicial</title>
+  <title>Contactos</title>
   <style>
     /* Centra o loading */
 #loader {
@@ -47,7 +46,7 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Animacao da pagina */
+/* Add animation to "page content" */
 .animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
@@ -69,29 +68,6 @@
 #myDiv {
   display: none;
   text-align: center;
-}
-
-/* 3 colunas */
-.column {
-  float: center;
-  width: 500px;
-  padding: 30px;
-}
-
-
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-
-}
-
-/* Responsive */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
 }
   </style>
 </head>
@@ -121,46 +97,18 @@
 </nav>
 </header>
 
-<main class="maincontent">
-  <section class="main-principal">
-    <div>
-    <a href="passes.html"><h2>Que passe devo usar?</h2></a>
-    <p>Descubra qual o passe que se adqua mais a si!</p>
-  </div>
-    <img class="imgcolumn1" src="img/autocarro.jpg">
-</section>
-
-<section class="main-secundario" >
-  <div class="main-secundario-titulo">
-    <a href="#"><h4>Perdi o meu cartão, o que devo fazer?</h4></a>
-    <p>Caso perca o cartao deve comunicar a um operador de transporte
-      para que o cartao seja anulado. Deve solicitar de seguida um 
-    novo cartao mediante o preço.</p>
-  </div>
-</section>
-
-<section class="main-secundario" >
-  <div class="main-secundario-titulo2">
-    <a href="metodospagamento.html"><h4>Como posso pagar? Que métodos de pagamento existem?</h4></a>
-    <p>Tem disponivel os métodos de pagamento mais recentes!</p>
-  </div>
-</section>
+<main>
 </main>
 
-<footer class="footer">
-  <a href="mailto:municipio@cm-portalegre.pt">municipio@cm-portalegre.pt</a>
-  <!--VER ESTo-->
-  <div>
-  Julho, 2022&#174;
-  </div>
-   <button class="scrollToTopBtn"><img src="img/topbuttonimage.svg" alt=""></button>
+<footer>
+  <button class="scrollToTopBtn"><img src="img/topbuttonimage.svg" alt=""></button>
 </footer>
 </div>
 <script>
   var myVar;
   
-  function myFunction() {        //1500
-    myVar = setTimeout(showPage, 500);
+  function myFunction() {
+    myVar = setTimeout(showPage, 1200);
   }
   
   function showPage() {
@@ -169,21 +117,21 @@
   }
   </script>
   <script>
-    // Seleciona o elemento
+    // Seleciona o elemento footer
 var target = document.querySelector("footer");
 
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
 var rootElement = document.documentElement;
 
-// Criar funcao
+// Cria a funcao
 function callback(entries, observer) {
-  // Retorna a array
+  // Chama a funcao e retorna
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // Mostrar botao
+      // Mostra o botao
       scrollToTopBtn.classList.add("showBtn");
     } else {
-      // Esconder botao
+      // Esconde o botao
       scrollToTopBtn.classList.remove("showBtn");
     }
   });
@@ -197,43 +145,10 @@ function scrollToTop() {
 }
 scrollToTopBtn.addEventListener("click", scrollToTop);
 
-// Da para ver e cria uma nova configuracao.
 let observer = new IntersectionObserver(callback);
-// Ja se ve 
+// Mostra o elemento 
 observer.observe(target);
   </script>
 </body>
+
 </html>
-<!--<div  class="row">
-    <div class="column" style="background-color:rgb(255, 255, 255);">
-      <h2>Passe Interurbano</h2>
-      <br>
-      <a href="interurbano.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
-     <p>
-      <div>
-        <a href="interurbano.html"><span>Selecionar</span></a>
-      </div>
-    </p>
-      </div>
-    <div class="column" style="background-color:rgb(255, 255, 255);">
-      <h2>Passe Urbano</h2>
-      <br>
-      <a href="urbano.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
-      <p>
-      <div>
-        <a href="urbano.html"><span>Selecionar</span></a>
-      </div>
-    </p>
-    </div>
-    <div class="column" style="background-color:rgb(255, 255, 255);">
-      <h2>Carregar Viagens</h2>
-      <br>
-      <a href="carregarviagens.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
-      
-      <p>
-        <div>
-        <a href="carregarviagens.html"><span>Selecionar</span></a>
-      </div>
-    </p>
-    </div>
-  </div>-->
