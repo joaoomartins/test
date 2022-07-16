@@ -15,6 +15,16 @@ html {
   .imgcolumn1 {
     height: 200px;
     width: 400px;
+    margin-top: 50px;
+  }
+  .imgpagamento {
+    height: 150px;
+    width: 150px;
+  }
+
+  .imgpagamentombway {
+    height: 150px;
+    width: 220px;
   }
 .imglogo {
     /*imagem*/
@@ -39,6 +49,7 @@ html {
   .imgcolumn1 {
     height: 200px;
     width: 300px;
+    margin-top: 50px;
   }
     .menu>ul {
         display: block !important;
@@ -52,6 +63,7 @@ html {
   .imgcolumn1 {
     height: 200px;
     width: 300px;
+    margin-top: 50px;
   }
     .menu>ul {
         height: auto;
@@ -67,6 +79,7 @@ html {
   .imgcolumn1 {
     height: 200px;
     width: 300px;
+    margin-top: 50px;
   }
     .menu>img {
         width: 160px;
@@ -142,7 +155,7 @@ footer {
 
   .main-principal {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 
@@ -153,7 +166,7 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    margin-top: 70px;
+    margin-top: 40px;
   }
 
   .main-secundario-titulo {
@@ -165,4 +178,11 @@ footer {
 
   .footer {
     padding: 32px;
+}
+
+.img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
 }

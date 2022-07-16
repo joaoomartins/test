@@ -18,7 +18,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <title>Contactos</title>
+  <title>Métodos de Pagmento</title>
   <style>
     /* Centra o loading */
 #loader {
@@ -46,7 +46,7 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Add animation to "page content" */
+/* Animacao da pagina */
 .animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
@@ -69,6 +69,90 @@
   display: none;
   text-align: center;
 }
+
+/* 3 colunas */
+.column {
+  float: center;
+  width: 500px;
+  padding: 30px;
+}
+
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+/*Botao selecionar*/
+:root {
+	--color-white: #ffffff;
+	--color-light: #f1f5f9;
+	--color-black: #121212;
+	--color-night: #001632;
+
+	--color-red: #f44336;
+	--color-blue: #1a73e8;
+	--color-gray: #80868b;
+	--color-grayish: #dadce0;
+
+	--shadow-normal: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+		0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	--shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.input-control {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 1.25rem;
+			}
+
+			.input-field {
+				font-family: inherit;
+				font-size: 1rem;
+				font-weight: 400;
+				line-height: inherit;
+				width: 100%;
+				height: auto;
+				padding: 0.75rem 1.25rem;
+				border: none;
+				outline: none;
+				border-radius: 2rem;
+				color: var(--color-black);
+				background: var(--color-light);
+				text-transform: unset;
+				text-rendering: optimizeLegibility;
+			}
+
+			.input-submit {
+				font-family: inherit;
+				font-size: 1rem;
+				font-weight: 500;
+				line-height: inherit;
+				cursor: pointer;
+				min-width: 40%;
+				height: auto;
+				padding: 0.65rem 1.25rem;
+				border: none;
+				outline: none;
+				border-radius: 4rem;
+				color: var(--color-white);
+				background: var(--color-blue);
+				box-shadow: var(--shadow-medium);
+				text-transform: capitalize;
+				text-rendering: optimizeLegibility;
+			}
   </style>
 </head>
 <body onload="myFunction()" style="margin:0;">
@@ -86,9 +170,6 @@
         <li class="nav-item active">
           <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
-          <a style="color:black ;" class="nav-link" href="contactos.html">Contactos</a>
-        </li>
     </ul>
     <div class="buttonlogin">
     <a style="color:black ;" class="nav-link" href="login.html">Entrar - Registar</a>
@@ -98,11 +179,49 @@
 </header>
 
 <main>
-</main>
+    <div  class="row">
+      <div class="column" style="background-color:rgb(255, 255, 255);">
+        <h2>Multibanco</h2>
+        <br>
+        <a href="#"><img class="imgpagamento" src="img/multibanco.png" alt=""></a>
+       <p>
+          <p><strong>Será dada a entidade, referência e valor para efetuar o pagamento.</strong></p>
+        <div>
+        </div>
+        
+      </p>
+        </div>
+      <div class="column" style="background-color:rgb(255, 255, 255);">
+        <h2>MBWay</h2>
+        <br>
+        <a href="#"><img class="imgpagamentombway" src="img/mbway.png" alt=""></a>
+        <p>
+          <p><strong>Será mostrado o valor e em seguida o seu número de telemóvel para efetuar o pagamento.</strong></p>
+        <div>
+        </div>
+      </p>
+      </div>
+      <div class="column" style="background-color:rgb(255, 255, 255);">
+        <h2>Paypal</h2>
+        <br>
+        <a href="#"><img class="imgpagamento" src="img/paypal.jpg" alt=""></a>
+        <p>
+          <p><strong>Será rederecionado para a página de login do paypal e depois de iniciar sessão será feito o pagamento.</strong></p>
+          <div>
+        </div>
+      </p>
+      </div>
+    </div>
+  </main>
+  
 
-<footer>
-  <button class="scrollToTopBtn"><img src="img/topbuttonimage.svg" alt=""></button>
-</footer>
+  <footer class="footer">
+    <a href="mailto:municipio@cm-portalegre.pt">municipio@cm-portalegre.pt</a>
+    <div>
+    Julho, 2022&#174;
+    </div>
+     <button class="scrollToTopBtn"><img class="img" src="img/topbuttonimage.svg" alt=""></button>
+  </footer>
 </div>
 <script>
   var myVar;

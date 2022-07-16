@@ -18,7 +18,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <title>Página Inicial</title>
+  <title>Passe</title>
   <style>
     /* Centra o loading */
 #loader {
@@ -171,7 +171,7 @@
           <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a style="color:black ;" class="nav-link" href="contactos.html">Contactos</a>
+          <a style="color:black ;" class="nav-link" href="metodospagamento.html">Pagamentos</a>
         </li>
     </ul>
     <div class="buttonlogin">
@@ -188,7 +188,7 @@
       <br>
       <a href="interurbano.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
      <p>
-        <p><strong> Interurbano - é a opção correta se utiliza os transportes para fora da zona urbana!</strong></p>
+        <p><strong> Interurbano - Caso utilize os tranportes fora da zona urbana é este que deve utilizar!</strong></p>
       <div>
         <a href="interurbano.html"><input type="button" class="input-submit" value="Selecionar"></a>
       </div>
@@ -200,7 +200,7 @@
       <br>
       <a href="urbano.html"><img class="imgcolumn" src="img/logo camara portalegre.jpg" alt=""></a>
       <p>
-        <p><strong>Urbano - é a opção caso utilize os transportes dentro da zona urbana!</strong></p>
+        <p><strong>Urbano - Caso utilize os tranportes dentro da zona urbana é este que deve utilizar!</strong></p>
       <div>
         <a href="urbano.html"><input type="button" class="input-submit" value="Selecionar"></a>
       </div>
@@ -220,15 +220,19 @@
   </div>
 </main>
 
-<footer>
-  <button class="scrollToTopBtn"><img src="img/topbuttonimage.svg" alt=""></button>
+<footer class="footer">
+  <a href="mailto:municipio@cm-portalegre.pt">municipio@cm-portalegre.pt</a>
+  <div>
+  Julho, 2022&#174;
+  </div>
+   <button class="scrollToTopBtn"><img class="img" src="img/topbuttonimage.svg" alt=""></button>
 </footer>
 </div>
 <script>
   var myVar;
   
-  function myFunction() {        //1500
-    myVar = setTimeout(showPage, 500);
+  function myFunction() {        
+    myVar = setTimeout(showPage, 1500);
   }
   
   function showPage() {
