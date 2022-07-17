@@ -22,6 +22,10 @@
     crossorigin="anonymous"></script>
     <title>Login</title>
     <style>
+      .eyebutton {
+        width: 50px;
+        height: 50px;
+      }
         #input>* {
           height: 1.3em;
           float: left;
@@ -129,7 +133,7 @@
                     <div id="input" class="input-control">
                         <label for="password" class="input-label" hidden>Password </label>
                         <input type="password" name="password" class="input-field" placeholder="Password" minlength="7" required>
-                        <img class="img" src="img/eyebootstrap.svg" alt="">
+                        <img class="eyebutton" src="img/showpassword.png" alt="">
                     </div>
                     <script>
                         var input = document.querySelector('#input input');
@@ -141,7 +145,7 @@
                         <div style="display:none;" id="myDiv1" class="animate-bottom">
                             <div class="input-control">
                               <a href="#" class="text text-links">Recuperar Password</a>    
-                              <a href="index.html"><input type="button" class="input-submit" value="Criar"></a>
+                              <a href="index.html"><input type="button" class="input-submit" value="Entrar"></a>
                             </div>
                         </div>
                         <div id="loader1"></div>
@@ -154,7 +158,7 @@
       <div>
       Julho, 2022&#174;
       </div>
-       <button class="scrollToTopBtn"><img  src="img/topbuttonimage.svg" alt=""></button>
+       <button class="scrollToTopBtn"><img src="img/topbuttonimage.svg" alt=""></button>
     </footer>
  </div>
 <script>
